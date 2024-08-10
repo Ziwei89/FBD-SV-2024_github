@@ -7,7 +7,7 @@ kaggle address:
 Baidu Netdisk:  
 # Label content
 The label files are in XML format, and the main contents included in the labels are as follows:  
-     | For object detection  | For VIdeo object Detection  
+-    | For object detection  | For VIdeo object Detection  
 ---- | ----- | ------  
 images size	    |   width, height, depth    |  width, height  
 object class    |   bird                    |  n01503061  
