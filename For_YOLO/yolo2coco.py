@@ -7,18 +7,18 @@ import argparse
 classes = ['bird']#
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--image_path', default='../dataset/FBD-SV-2024/images/val',type=str, help="path of images")# 图片路径改一下
-parser.add_argument('--label_path', default='../dataset/FBD-SV-2024/labels/val',type=str, help="path of labels.txt")#图片标签路径改一下
+parser.add_argument('--img_path', default='../dataset/FBD-SV-2024/images/val',type=str, help="path of images")# 图片路径改一下
+parser.add_argument('--label_path', default='../dataset/FBD-SV-2024/yolo_labels/val',type=str, help="path of labels.txt")#图片标签路径改一下
 parser.add_argument('--save_path', type=str,default='../val.json', help="if not split the dataset, give a path to a json file")
 arg = parser.parse_args()
 
 def yolo2coco(arg):
-    print("Loading data from ", arg.image_path, arg.label_path)
+    print("Loading data from ", arg.img_path, arg.label_path)
 
-    assert os.path.exists(arg.image_path)
+    assert os.path.exists(arg.img_path)
     assert os.path.exists(arg.label_path)
     
-    originImagesDir = arg.image_path                                   
+    originImagesDir = arg.img_path                                   
     originLabelsDir = arg.label_path
     # images dir name
     indexes = os.listdir(originImagesDir)

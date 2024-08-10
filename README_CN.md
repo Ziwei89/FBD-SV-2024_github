@@ -4,7 +4,7 @@
 监控视频飞鸟目标数据集(FBD-SV-2024)包含有483个视频片段，共计28694帧图像。其中23833帧图像中包含有28366只飞鸟目标实例。
 # 获取该数据集
 kaggle地址：  
-百度网盘:  
+百度网盘: https://pan.baidu.com/s/1sw7bv4BeiMnHWyH4BNutYg 提取码：48w4
 # 标签内容
 标签文件为xml格式，标签中包含的主要内容如下：  
  项目       | 用于目标检测            | 用于视频目标检测  
@@ -60,8 +60,11 @@ FBD-SV-2024/
                             |---val/        ...
                                       ...
 ```
+
+<font color=red>注意：</font> 某些脚本来源于其他工程或互联网，在此鸣谢。若需要特别指明或存在权力要求，请联系sun_zi_wei@my.swjtu.edu.cn。
+
 # 视频拆帧
-提供了两个脚本用于对视频进行拆帧处理：FBD-SV-2024/Common/split_video_frames_for_object_detection.py和FBD-SV-2024/Common/split_video_frames_for_video_object_detection.py。运行这两个脚本需要安装opencv-python，需要指定FBD-SV-2024数据集所在路径。
+提供了两个脚本用于对视频进行拆帧处理：FBD-SV-2024_github/Common/split_video_frames_for_object_detection.py和FBD-SV-2024_github/Common/split_video_frames_for_video_object_detection.py。运行这两个脚本需要安装opencv-python，需要指定FBD-SV-2024数据集所在路径。
 ## 1、拆帧用于目标检测，图片将保存于FBD-SV-2024/images/train/ 和FBD-SV-2024/images/val/目录下。
 ```
 python split_video_frames_for_object_detection.py \
@@ -73,4 +76,65 @@ python split_video_frames_for_video_object_detection.py \
                     --data_root_path=/path/to/your/FBD-SV-2024/
 ```
 # 其他脚本
-## 1、查看标签脚本
+## 1、查看真值标签，FBD-SV-2024_github/Common/view_label.py
+通过这个脚本，可以查看真值标签。将在图片目标上画出边界框，保存于check_test.jpg，可以按提示向前和向后遍历。运行这个脚本需要安装解析xml文件的包xml.etree.ElementTree，需要指定FBD-SV-2024数据集所在路径和指定遍历train还是val。
+```
+python view_label.py \
+        --data_root_path=/path/to/your/FBD-SV-2024/ \
+        --train_or_val=train
+```
+## 2、准备YOLO目标检测数据相关脚本
+### （1）voc的xml标签转换为yolo所需的txt标签，FBD-SV-2024_github/For_YOLO/voc2yolo.py
+运行该脚本需要指定voc标签路径（原始标签路径）和yolo标签路径（新标签路径）,训练标签和测试标签运行两次。
+```
+python voc2yolo.py \
+        --raw_label_path=/path/to/your/FBD-SV-2024/labels/train \
+        --new_label_path=/path/to/your/yolo_labels/train
+```
+### （2）获取train.txt和val.txt，FBD-SV-2024_github/For_YOLO/get_train_val_txt_for_yolo.py
+运行该脚本需要指定图像路径和输出txt路径。
+```
+python get_train_val_txt_for_yolo.py \
+        --img_path=/path/to/your/FBD-SV-2024/images/ \
+        --txt_path=/path/to/your/yolo_txt_out_path/
+```
+### （3）yolo标签txt转coco标签json，FBD-SV-2024_github/For_YOLO/yolo2coco.py
+运行该脚本需要指定图像路径、yolo标签路径和输出coco标签路径。
+```
+python yolo2coco.py \
+        --img_path=/path/to/your/FBD-SV-2024/images/ \
+        --label_path=/path/to/your/yolo_txt_label_path/val \
+        --save_path=/path/to/your/coco_json_out_path/val.json
+```
+## 3、准备VID视频目标检测数据相关脚本：获取VID_train_15frames.txt和VID_val_videos.txt，FBD-SV-2024_github/For_VID/get_train_val_txt_for_vid.py
+运行该脚本需要指定FBD-SV-2024数据集所在路径。
+```
+python get_train_val_txt_for_vid.py \
+        --data_root_path=/path/to/your/FBD-SV-2024/
+```
+# 先进目标检测算法、视频目标检测算法和监控视频飞鸟目标检测算法在该数据集上的效果
+在训练集上训练，测试集上测试。  
+ METHOD             | AP<sub>50</sub> | AP<sub>75</sub> | AP        | AP<sub>S</sub> | AP<sub>M</sub> | AP<sub>L</sub>  
+ :----:             | :-----:         | :------:        | :------:  | :------:       | :------:       | :------:  
+ YOLOV5L            | 0.00            | 0.00            | 0.00      | 0.00           | 0.00           | 0.00  
+ YOLOV6L            | 0.00            | 0.00            | 0.00      | 0.00           | 0.00           | 0.00  
+ YOLOV7L            | 0.00            | 0.00            | 0.00      | 0.00           | 0.00           | 0.00  
+ YOLOV8L            | 0.00            | 0.00            | 0.00      | 0.00           | 0.00           | 0.00  
+ SSD                | 0.00            | 0.00            | 0.00      | 0.00           | 0.00           | 0.00  
+ FGFA               | 0.00            | 0.00            | 0.00      | 0.00           | 0.00           | 0.00  
+ SELSA              | 0.00            | 0.00            | 0.00      | 0.00           | 0.00           | 0.00  
+ Temporal RoI Align | 0.00            | 0.00            | 0.00      | 0.00           | 0.00           | 0.00  
+ FBOD-BMI           | 0.00            | 0.00            | 0.00      | 0.00           | 0.00           | 0.00  
+ FBOD-SV            | 0.00            | 0.00            | 0.00      | 0.00           | 0.00           | 0.00  
+
+# 另外，我们做了一些工作用于监控视频飞鸟目标的检测（供参考）：
+\[1\] Z. -W. Sun, Z. -X. Hua, H. -C. Li and H. -Y. Zhong, "Flying Bird Object Detection Algorithm in Surveillance Video Based on Motion Information," in IEEE Transactions on Instrumentation and Measurement, vol. 73, pp. 1-15, 2024, Art no. 5002515, doi: 10.1109/TIM.2023.3334348.
+\[2\] Z. -W. Sun, Z. -X. Hua, H. -C. Li and Y. Li, "A Flying Bird Object Detection Method for Surveillance Video," in IEEE Transactions on Instrumentation and Measurement, vol. 73, pp. 1-14, 2024, Art no. 5026914, doi: 10.1109/TIM.2024.3435183.
+
+# 贡献：
+孙自伟，西南交通大学信息科学与技术学院博士研究生，该项目的主要负责人。具体贡献有：发起项目；规划、实施项目；设备部署、数据采集、视频片段筛选、数据处理；参与16.3%的数据标注工作。
+华泽玺，西南交通大学信息科学与技术学院教授，该项目资助人，管理人。具体贡献有：提供设备和资金支持，管理该项目的进度。
+漆智鹏，西南交通大学信息科学与技术学院博士研究生，该项目的参与者。具体贡献有：参与28.2%的数据标注工作。
+李翔，西南交通大学信息科学与技术学院硕士研究生，该项目的参与者。具体贡献有：参与19.7%的数据标注工作。
+李艳，西南交通大学信息科学与技术学院博士研究生，该项目的参与者。具体贡献有：参与18.0%的数据标注工作。
+张金驰，西南交通大学信息科学与技术学院硕士研究生，该项目的参与者。具体贡献有：参与17.8%的数据标注工作。
