@@ -4,7 +4,7 @@ The Flying Bird object Dataset in Surveillance Video (FBD-SV-2024) for surveilla
 The FBD-SV-2024 comprises 483 video clips, totaling 28,694 frames of images. Among these frames, 23,833 frames contain a total of 28,366 instances of flying birds.
 # Get the dataset
 kaggle address:  
-Baidu Netdisk:  
+Baidu Netdisk: https://pan.baidu.com/s/1sw7bv4BeiMnHWyH4BNutYg Extraction code: 48w4
 # Label contents
 The label files are in XML format, and the main contents included in the labels are as follows:  
  Item            | For object detection   | For VIdeo object Detection  
@@ -128,13 +128,13 @@ Train on the training set, test on the val set.
  FBOD-SV            | 0.00            | 0.00            | 0.00      | 0.00           | 0.00           | 0.00  
 
 # In addition, we have done some work for the detection of flying birds in surveillance videos (for reference) :
-\[1\] Z. -W. Sun, Z. -X. Hua, H. -C. Li and H. -Y. Zhong, "Flying Bird Object Detection Algorithm in Surveillance Video Based on Motion Information," in IEEE Transactions on Instrumentation and Measurement, vol. 73, pp. 1-15, 2024, Art no. 5002515, doi: 10.1109/TIM.2023.3334348.
+\[1\] Z. -W. Sun, Z. -X. Hua, H. -C. Li and H. -Y. Zhong, "Flying Bird Object Detection Algorithm in Surveillance Video Based on Motion Information," in IEEE Transactions on Instrumentation and Measurement, vol. 73, pp. 1-15, 2024, Art no. 5002515, doi: 10.1109/TIM.2023.3334348.  
 \[2\] Z. -W. Sun, Z. -X. Hua, H. -C. Li and Y. Li, "A Flying Bird Object Detection Method for Surveillance Video," in IEEE Transactions on Instrumentation and Measurement, vol. 73, pp. 1-14, 2024, Art no. 5026914, doi: 10.1109/TIM.2024.3435183.
 
 # Contribution:
-Zi-Wei Sun, a Ph.D. candidate at the School of Information Science and Technology, Southwest Jiaotong University, is the main person in charge of this project.  His specific contributions include: initiating the project;  planning and implementing the project;  equipment deployment, data acquisition, video clip screening, and data processing;  participating in 16.3% of the data annotation work.
-Ze-Xi Hua, a professor at the School of Information Science and Technology, Southwest Jiaotong University, is the sponsor and manager of this project. His specific contributions include: providing equipment and financial support, and managing the progress of the project.
-Zhi-Peng Qi, a Ph.D. candidate at the School of Information Science and Technology, Southwest Jiaotong University, is a participant in this project. His specific contribution includes: participating in 28.2% of the data annotation work.
-Xiang Li, a graduate student at the School of Information Science and Technology, Southwest Jiaotong University, is a participant in this project. His specific contribution includes: participating in 19.7% of the data annotation work.
-Yan Li, a Ph.D. candidate at the School of Information Science and Technology, Southwest Jiaotong University, is a participant in this project. Her specific contribution includes: participating in 18.0% of the data annotation work.
+Zi-Wei Sun, a Ph.D. candidate at the School of Information Science and Technology, Southwest Jiaotong University, is the main person in charge of this project.  His specific contributions include: initiating the project;  planning and implementing the project;  equipment deployment, data acquisition, video clip screening, and data processing;  participating in 16.3% of the data annotation work.  
+Ze-Xi Hua, a professor at the School of Information Science and Technology, Southwest Jiaotong University, is the sponsor and manager of this project. His specific contributions include: providing equipment and financial support, and managing the progress of the project.  
+Zhi-Peng Qi, a Ph.D. candidate at the School of Information Science and Technology, Southwest Jiaotong University, is a participant in this project. His specific contribution includes: participating in 28.2% of the data annotation work.  
+Xiang Li, a graduate student at the School of Information Science and Technology, Southwest Jiaotong University, is a participant in this project. His specific contribution includes: participating in 19.7% of the data annotation work.  
+Yan Li, a Ph.D. candidate at the School of Information Science and Technology, Southwest Jiaotong University, is a participant in this project. Her specific contribution includes: participating in 18.0% of the data annotation work.  
 Jin-Chi Zhang, a graduate student at the School of Information Science and Technology, Southwest Jiaotong University, is a participant in this project. His specific contribution includes: participating in 17.8% of the data annotation work.
