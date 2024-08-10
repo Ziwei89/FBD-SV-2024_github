@@ -21,43 +21,43 @@ The structure of FBD-SV-2024 is as follows (where the subdirectories under the V
 FBD-SV-2024/
            |---videos/
            |        |---train/
-           |        |            |---bird_1.mp4
-           |        |            |---bird_2.mp4
-           |        |---val/             ...
+           |        |         |---bird_1.mp4
+           |        |         |---bird_2.mp4
+           |        |---val/        ...
            |                 ...
            |
            |---images/
            |        |---train/
-           |        |            |---bird_1_000000.jpg
-           |        |            |---bird_1_000001.jpg
-           |        |---val/              ...
+           |        |         |---bird_1_000000.jpg
+           |        |         |---bird_1_000001.jpg
+           |        |---val/        ...
            |                 ...
            |
            |---labels/
            |        |---train/
-           |        |            |---bird_1_000000.xml
-           |        |            |---bird_1_000001.xml
-           |        |---val/               ...
+           |        |         |---bird_1_000000.xml
+           |        |         |---bird_1_000001.xml
+           |        |---val/        ...
            |                 ...
            |---VID/
                    |---images/
                    |        |---train/
-                   |        |            |---bird_1/
-                   |        |            |       |---000000.JPEG
-                   |        |            |       |---000001.JPEG
-                   |        |            |              ...
-                   |        |            |---bird_2/
+                   |        |         |---bird_1/
+                   |        |         |         |---000000.JPEG
+                   |        |         |         |---000001.JPEG
+                   |        |         |              ...
+                   |        |         |---bird_2/
                    |        |---val/        ...
                    |                 ...
                    |
                    |---labels/
                             |---train/
-                            |            |---bird_1/
-                            |            |       |---000000.xml
-                            |            |       |---000001.xml
-                            |            |              ...
-                            |            |---bird_2/
-                            |---val/        ...
+                            |         |---bird_1/
+                            |         |         |---000000.xml
+                            |         |         |---000001.xml
+                            |         |              ...
+                            |         |---bird_2/
+                            |---val/      ...
                                       ...
 ```
 
@@ -129,12 +129,18 @@ Train on the training set, test on the val set.
 
 # In addition, we have done some work for the detection of flying birds in surveillance videos (for reference) :
 \[1\] Z. -W. Sun, Z. -X. Hua, H. -C. Li and H. -Y. Zhong, "Flying Bird Object Detection Algorithm in Surveillance Video Based on Motion Information," in IEEE Transactions on Instrumentation and Measurement, vol. 73, pp. 1-15, 2024, Art no. 5002515, doi: 10.1109/TIM.2023.3334348.  
+<br>
 \[2\] Z. -W. Sun, Z. -X. Hua, H. -C. Li and Y. Li, "A Flying Bird Object Detection Method for Surveillance Video," in IEEE Transactions on Instrumentation and Measurement, vol. 73, pp. 1-14, 2024, Art no. 5026914, doi: 10.1109/TIM.2024.3435183.
 
 # Contribution:
 Zi-Wei Sun, a Ph.D. candidate at the School of Information Science and Technology, Southwest Jiaotong University, is the main person in charge of this project.  His specific contributions include: initiating the project;  planning and implementing the project;  equipment deployment, data acquisition, video clip screening, and data processing;  participating in 16.3% of the data annotation work.  
+<br>
 Ze-Xi Hua, a professor at the School of Information Science and Technology, Southwest Jiaotong University, is the sponsor and manager of this project. His specific contributions include: providing equipment and financial support, and managing the progress of the project.  
+<br>
 Zhi-Peng Qi, a Ph.D. candidate at the School of Information Science and Technology, Southwest Jiaotong University, is a participant in this project. His specific contribution includes: participating in 28.2% of the data annotation work.  
+<br>
 Xiang Li, a graduate student at the School of Information Science and Technology, Southwest Jiaotong University, is a participant in this project. His specific contribution includes: participating in 19.7% of the data annotation work.  
+<br>
 Yan Li, a Ph.D. candidate at the School of Information Science and Technology, Southwest Jiaotong University, is a participant in this project. Her specific contribution includes: participating in 18.0% of the data annotation work.  
+<br>
 Jin-Chi Zhang, a graduate student at the School of Information Science and Technology, Southwest Jiaotong University, is a participant in this project. His specific contribution includes: participating in 17.8% of the data annotation work.

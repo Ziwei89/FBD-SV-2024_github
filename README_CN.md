@@ -21,43 +21,43 @@ FBD-SV-2024的结构如下（其中，VID目录下分支用于视频目标检测
 FBD-SV-2024/
            |---videos/
            |        |---train/
-           |        |            |---bird_1.mp4
-           |        |            |---bird_2.mp4
-           |        |---val/             ...
+           |        |         |---bird_1.mp4
+           |        |         |---bird_2.mp4
+           |        |---val/        ...
            |                 ...
            |
            |---images/
            |        |---train/
-           |        |            |---bird_1_000000.jpg
-           |        |            |---bird_1_000001.jpg
-           |        |---val/              ...
+           |        |         |---bird_1_000000.jpg
+           |        |         |---bird_1_000001.jpg
+           |        |---val/        ...
            |                 ...
            |
            |---labels/
            |        |---train/
-           |        |            |---bird_1_000000.xml
-           |        |            |---bird_1_000001.xml
-           |        |---val/               ...
+           |        |         |---bird_1_000000.xml
+           |        |         |---bird_1_000001.xml
+           |        |---val/        ...
            |                 ...
            |---VID/
                    |---images/
                    |        |---train/
-                   |        |            |---bird_1/
-                   |        |            |       |---000000.JPEG
-                   |        |            |       |---000001.JPEG
-                   |        |            |              ...
-                   |        |            |---bird_2/
+                   |        |         |---bird_1/
+                   |        |         |         |---000000.JPEG
+                   |        |         |         |---000001.JPEG
+                   |        |         |              ...
+                   |        |         |---bird_2/
                    |        |---val/        ...
                    |                 ...
                    |
                    |---labels/
                             |---train/
-                            |            |---bird_1/
-                            |            |       |---000000.xml
-                            |            |       |---000001.xml
-                            |            |              ...
-                            |            |---bird_2/
-                            |---val/        ...
+                            |         |---bird_1/
+                            |         |         |---000000.xml
+                            |         |         |---000001.xml
+                            |         |              ...
+                            |         |---bird_2/
+                            |---val/      ...
                                       ...
 ```
 
@@ -129,12 +129,18 @@ python get_train_val_txt_for_vid.py \
 
 # 另外，我们做了一些工作用于监控视频飞鸟目标的检测（供参考）：
 \[1\] Z. -W. Sun, Z. -X. Hua, H. -C. Li and H. -Y. Zhong, "Flying Bird Object Detection Algorithm in Surveillance Video Based on Motion Information," in IEEE Transactions on Instrumentation and Measurement, vol. 73, pp. 1-15, 2024, Art no. 5002515, doi: 10.1109/TIM.2023.3334348.  
+<br>
 \[2\] Z. -W. Sun, Z. -X. Hua, H. -C. Li and Y. Li, "A Flying Bird Object Detection Method for Surveillance Video," in IEEE Transactions on Instrumentation and Measurement, vol. 73, pp. 1-14, 2024, Art no. 5026914, doi: 10.1109/TIM.2024.3435183.
 
 # 贡献：
 孙自伟，西南交通大学信息科学与技术学院博士研究生，该项目的主要负责人。具体贡献有：发起项目；规划、实施项目；设备部署、数据采集、视频片段筛选、数据处理；参与16.3%的数据标注工作。  
+<br>
 华泽玺，西南交通大学信息科学与技术学院教授，该项目资助人，管理人。具体贡献有：提供设备和资金支持，管理该项目的进度。  
+<br>
 漆智鹏，西南交通大学信息科学与技术学院博士研究生，该项目的参与者。具体贡献有：参与28.2%的数据标注工作。  
+<br>
 李翔，西南交通大学信息科学与技术学院硕士研究生，该项目的参与者。具体贡献有：参与19.7%的数据标注工作。  
+<br>
 李艳，西南交通大学信息科学与技术学院博士研究生，该项目的参与者。具体贡献有：参与18.0%的数据标注工作。  
+<br>
 张金驰，西南交通大学信息科学与技术学院硕士研究生，该项目的参与者。具体贡献有：参与17.8%的数据标注工作。
