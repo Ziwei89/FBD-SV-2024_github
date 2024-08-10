@@ -1,7 +1,7 @@
 import os
 import xml.etree.ElementTree as ET
 import cv2
-
+import argparse
 
 
 classes=['bird']
@@ -28,9 +28,16 @@ def convert_annotation(annotation_file):
 
 
 if __name__ == "__main__":
-    dataset_root_path = "/home/ziwei/ziweiwork/dataset/FBD-SV-2024/"
-    label_path = dataset_root_path + "labels/train/"
-    image_path = dataset_root_path + "images/train/"
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--data_root_path', default="../dataset/FBD-SV-2024/", type=str,
+                        help='data_root_path: The path of the dataset.')
+    parser.add_argument('--train_or_val', default="train", type=str,
+                        help='train_or_val: To view the train or val label.')
+    args = parser.parse_args()
+
+    label_path = args.data_root_path + "labels/" + args.train_or_val + "/"
+    image_path = args.data_root_path + "images/" + args.train_or_val + "/"
 
     images = os.listdir(image_path)
     images.sort()

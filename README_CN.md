@@ -16,7 +16,7 @@ kaggle地址：
  目标边界框  | xmin, ymin, xmax, ymax | xmin, ymin, xmax, ymax  
 
 # 数据集目录结构
-FBD-SV-2024的结构如下（其中，VID目录下分支用于视频目标检测。FBD-SV-2024的结构如下（其中，VID目录下分支用于视频目标检测。
+FBD-SV-2024的结构如下（其中，VID目录下分支用于视频目标检测。FBD-SV-2024的结构如下（其中，VID目录下分支用于视频目标检测。由于图片数据较大，没有上传图片，但是提供了相关python脚本，可以通过运行该脚本，对视频进行拆帧得到，后面将说明如何使用所提供的脚本）：
 ```
 FBD-SV-2024/
            |---videos/
@@ -60,3 +60,17 @@ FBD-SV-2024/
                             |---val/        ...
                                       ...
 ```
+# 视频拆帧
+提供了两个脚本用于对视频进行拆帧处理：FBD-SV-2024/Common/split_video_frames_for_object_detection.py和FBD-SV-2024/Common/split_video_frames_for_video_object_detection.py。运行这两个脚本需要安装opencv-python，需要指定FBD-SV-2024数据集所在路径。
+## 1、拆帧用于目标检测，图片将保存于FBD-SV-2024/images/train/ 和FBD-SV-2024/images/val/目录下。
+```
+python split_video_frames_for_object_detection.py \
+                     --data_root_path=/path/to/your/FBD-SV-2024/
+```
+## 2、拆帧用于视频目标检测，图片将保存于FBD-SV-2024/VID/images/train/ 和FBD-SV-2024/VID/images/val/目录下。
+```
+python split_video_frames_for_video_object_detection.py \
+                    --data_root_path=/path/to/your/FBD-SV-2024/
+```
+# 其他脚本
+## 1、查看标签脚本
