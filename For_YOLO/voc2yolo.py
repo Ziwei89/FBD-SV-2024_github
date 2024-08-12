@@ -56,9 +56,9 @@ def convert_annotation(xml_path, new_label_path, xml_name):
 if __name__ == "__main__": 
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--raw_label_path', default="../dataset/FBD-SV-2024/labels/val/", type=str,
+    parser.add_argument('--raw_label_path', default="../../dataset/FBD-SV-2024/labels/train/", type=str,
                         help='raw_label_path: The voc label path.')
-    parser.add_argument('--new_label_path', default="../dataset/FBD-SV-2024/yolo_labels/val/", type=str,
+    parser.add_argument('--new_label_path', default="../../dataset/FBD-SV-2024/yolo_labels/train/", type=str,
                         help='new_label_path: The yolo label path.')
     args = parser.parse_args()
 

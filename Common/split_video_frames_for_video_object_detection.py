@@ -27,7 +27,7 @@ def split_video(in_video_path, out_image_path):
 
 if __name__ == "__main__": 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data_root_path', default="../dataset/FBD-SV-2024/", type=str,
+    parser.add_argument('--data_root_path', default="../../dataset/FBD-SV-2024/", type=str,
                         help='data_root_path: The path of the dataset.')
     args = parser.parse_args()
 
