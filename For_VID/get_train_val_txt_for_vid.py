@@ -14,15 +14,15 @@ def f_frame_id(frame_name):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data_root_path', default="../dataset/FBD-SV-2024/VID/", type=str,
-                        help='data_root_path: The path of the dataset for VID.')
+    parser.add_argument('--data_root_path', default="../dataset/FBD-SV-2024/", type=str,
+                        help='data_root_path: The path of the dataset.')
     args = parser.parse_args()
 
-    img_prefix_path = args.data_root_path + "images/"
-    label_prefix_path = args.data_root_path + "labels/"
+    img_prefix_path = args.data_root_path + "VID/images/"
+    label_prefix_path = args.data_root_path + "VID/labels/"
 
-    train_txt_path =  args.data_root_path + "VID_train_15frames.txt" #
-    val_txt_path = args.data_root_path + "VID_val_videos.txt"
+    train_txt_path =  args.data_root_path + "VID/VID_train_15frames.txt" #
+    val_txt_path = args.data_root_path + "VID/VID_val_videos.txt"
 
     for train_val in ["train", "val"]:
         if train_val == "train":

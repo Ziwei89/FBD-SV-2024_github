@@ -7,12 +7,12 @@ import argparse
 
 def split_video(in_video_path, out_image_path):
     """ split video"""
-    os.makedirs(out_image_path, exist_ok=True)
     videos = os.listdir(in_video_path)
     for video_name in videos:
         if video_name.split(".")[1] != "mp4" and video_name.split(".")[1] != "avi":
             continue
         print(video_name)
+        os.makedirs(out_image_path + video_name.split(".")[0] + '/', exist_ok=True)
         video_file_name = in_video_path + video_name
         video_file = cv2.VideoCapture(video_file_name)
         frame_num = 0
@@ -21,7 +21,7 @@ def split_video(in_video_path, out_image_path):
             if ret != True:
                 break
             else:
-                frame_name_path = out_image_path + '/' +  video_name.split(".")[0] + '/' + str(frame_num).zfill(6) + ".JPEG"
+                frame_name_path = out_image_path + video_name.split(".")[0] + '/' + str(frame_num).zfill(6) + ".JPEG"
                 cv2.imwrite(frame_name_path, frame)
             frame_num +=1
 
@@ -31,12 +31,12 @@ if __name__ == "__main__":
                         help='data_root_path: The path of the dataset.')
     args = parser.parse_args()
 
-    train_video_path = args.data_root_path + "video/train/"
+    train_video_path = args.data_root_path + "videos/train/"
     train_image_path = args.data_root_path + "VID/images/train/"
     os.makedirs(train_image_path, exist_ok=True)
     split_video(in_video_path=train_video_path, out_image_path=train_image_path)
 
-    val_video_path = args.data_root_path + "video/val/"
+    val_video_path = args.data_root_path + "videos/val/"
     val_image_path = args.data_root_path + "VID/images/val/"
     os.makedirs(val_image_path, exist_ok=True)
     split_video(in_video_path=val_video_path, out_image_path=val_image_path)
