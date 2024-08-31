@@ -3,7 +3,7 @@
 监控视频飞鸟目标数据集FBD-SV-2024用于监控视频飞鸟目标检测算法的开发和性能评估。  
 监控视频飞鸟目标数据集(FBD-SV-2024)包含有483个视频片段，共计28694帧图像。其中23833帧图像中包含有28366只飞鸟目标实例。
 # 获取该数据集
-kaggle地址：  
+kaggle地址：https://www.kaggle.com/datasets/swjtuziwei/fbd-sv-2024  
 百度网盘: https://pan.baidu.com/s/1sw7bv4BeiMnHWyH4BNutYg 提取码：48w4
 # 标签内容
 标签文件为xml格式，标签中包含的主要内容如下：  
