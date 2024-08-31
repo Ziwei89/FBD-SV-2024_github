@@ -1,7 +1,13 @@
 [简体中文](README_CN.md)
 
 The Flying Bird object Dataset in Surveillance Video (FBD-SV-2024) for surveillance video flying bird object detection algorithm development and performance evaluation.  
-The FBD-SV-2024 comprises 483 video clips, totaling 28,694 frames of images. Among these frames, 23,833 frames contain a total of 28,366 instances of flying birds.
+The FBD-SV-2024 comprises 483 video clips, totaling 28,694 frames of images. Among these frames, 23,833 frames contain a total of 28,366 instances of flying birds.  
+
+Please refer to the paper related to this dataset for more description of the characteristics of this dataset. The paper link is not yet available...  
+Please refer to the paper if the dataset is useful for your work:
+```
+Please wait to provide the citation format later...
+```
 # Get the dataset
 kaggle address: https://www.kaggle.com/datasets/swjtuziwei/fbd-sv-2024  
 Baidu Netdisk: https://pan.baidu.com/s/1sw7bv4BeiMnHWyH4BNutYg Extraction code: 48w4
