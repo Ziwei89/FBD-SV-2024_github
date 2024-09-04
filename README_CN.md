@@ -3,10 +3,17 @@
 监控视频飞鸟目标数据集FBD-SV-2024用于监控视频飞鸟目标检测算法的开发和性能评估。  
 监控视频飞鸟目标数据集(FBD-SV-2024)包含有483个视频片段，共计28694帧图像。其中23833帧图像中包含有28366只飞鸟目标实例。  
 
-请查阅与该数据集相关的paper获取更多关于该数据集特征的描述。paper链接还未提供...  
+请查阅与该数据集相关的paper获取更多关于该数据集特征的描述。paper链接: https://arxiv.org/abs/2409.00317  
 如果该数据集对您的工作有用请引用该paper:  
 ```
-请稍等后续提供引用格式...
+@misc{sun2024fbdsv2024,
+    title={FBD-SV-2024: Flying Bird Object Detection Dataset in Surveillance Video},
+    author={Zi-Wei Sun and Ze-Xi Hua and Heng-Chao Li and Zhi-Peng Qi and Xiang Li and Yan Li and Jin-Chi Zhang},
+    year={2024},
+    eprint={2409.00317},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
 ```
 # 获取该数据集
 kaggle地址：https://www.kaggle.com/datasets/swjtuziwei/fbd-sv-2024  
