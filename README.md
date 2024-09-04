@@ -139,8 +139,8 @@ Train on the training set, test on the val set.
  FGFA               | 0.198            | 0.072            | 0.092      | 0.020           | 0.187           | 0.420  
  SELSA              | 0.400            | 0.162            | 0.193      | 0.050           | 0.414           | 0.614  
  Temporal RoI Align | 0.371            | 0.180            | 0.186      | 0.038           | 0.411           | 0.582  
- FBOD-BMI           | 0.692            | 0.302            | 0.351      | 0.306           | 0.434           | 0.401  
- FBOD-SV            | 0.719            | 0.341            | 0.371      | 0.313           | 0.479           | 0.425  
+ [FBOD-BMI](https://ieeexplore.ieee.org/document/10329987)           | 0.692            | 0.302            | 0.351      | 0.306           | 0.434           | 0.401  
+ [FBOD-SV](https://ieeexplore.ieee.org/document/10614237)            | 0.719            | 0.341            | 0.371      | 0.313           | 0.479           | 0.425  
 
 # In addition, we have done some work for the detection of flying birds in surveillance videos (for reference) :
 \[1\] Z. -W. Sun, Z. -X. Hua, H. -C. Li and H. -Y. Zhong, "Flying Bird Object Detection Algorithm in Surveillance Video Based on Motion Information," in IEEE Transactions on Instrumentation and Measurement, vol. 73, pp. 1-15, 2024, Art no. 5002515, doi: 10.1109/TIM.2023.3334348.  
