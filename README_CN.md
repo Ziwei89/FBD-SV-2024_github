@@ -17,7 +17,7 @@
 ```
 # 获取该数据集
 kaggle地址：https://www.kaggle.com/datasets/swjtuziwei/fbd-sv-2024  
-百度网盘: https://pan.baidu.com/s/1sw7bv4BeiMnHWyH4BNutYg 提取码：48w4
+百度网盘: https://pan.baidu.com/s/1sw7bv4BeiMnHWyH4BNutYg?pwd=48w4
 # 标签内容
 标签文件为xml格式，标签中包含的主要内容如下：  
  项目       | 用于目标检测            | 用于视频目标检测  
