@@ -16,6 +16,7 @@
 }
 ```
 # 获取该数据集
+figshare: https://figshare.com/s/1ca0193680f894a65371  
 kaggle地址：https://www.kaggle.com/datasets/swjtuziwei/fbd-sv-2024  
 百度网盘: https://pan.baidu.com/s/1sw7bv4BeiMnHWyH4BNutYg?pwd=48w4
 # 标签内容
