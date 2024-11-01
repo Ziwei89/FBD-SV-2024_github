@@ -16,6 +16,7 @@ Please refer to the paper if the dataset is useful for your work:
 }
 ```
 # Get the dataset
+figshare: https://figshare.com/s/1ca0193680f894a65371
 kaggle address: https://www.kaggle.com/datasets/swjtuziwei/fbd-sv-2024  
 Baidu Netdisk: https://pan.baidu.com/s/1sw7bv4BeiMnHWyH4BNutYg?pwd=48w4
 # Label contents
