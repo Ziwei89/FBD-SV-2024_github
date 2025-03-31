@@ -6,13 +6,18 @@ The FBD-SV-2024 comprises 483 video clips, totaling 28,694 frames of images. Amo
 Please refer to the paper related to this dataset for more description of the characteristics of this dataset. The link of the paper: https://arxiv.org/abs/2409.00317  
 Please refer to the paper if the dataset is useful for your work:
 ```
-@misc{sun2024fbdsv2024,
-    title={FBD-SV-2024: Flying Bird Object Detection Dataset in Surveillance Video},
-    author={Zi-Wei Sun and Ze-Xi Hua and Heng-Chao Li and Zhi-Peng Qi and Xiang Li and Yan Li and Jin-Chi Zhang},
-    year={2024},
-    eprint={2409.00317},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+@article{sun2024fbdsv2024,
+   author = {Sun, Zi-Wei and Hua, Ze-Xi and Li, Heng-Chao and Qi, Zhi-Peng and Li, Xiang and Li, Yan and Zhang, Jin-Chi},
+   title = {FBD-SV-2024: Flying Bird Object Detection Dataset in Surveillance Video},
+   journal = {Scientific Data},
+   volume = {12},
+   number = {1},
+   pages = {530},
+   ISSN = {2052-4463},
+   DOI = {10.1038/s41597-025-04872-6},
+   url = {https://doi.org/10.1038/s41597-025-04872-6},
+   year = {2025},
+   type = {Journal Article}
 }
 ```
 # Get the dataset
